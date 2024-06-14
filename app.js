@@ -14,40 +14,41 @@ function addTask() {
     if (task !== "") {
         db.collection("tasks").add({
             task: task,
-            timestamp: firebase.firestore. FieldValue.serverTimestamp(),
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         });
         taskInput.value = "";
     }
 }
 
 // Function to render tasks
-
-function renderTasks(doc) {
+function renderTasks(doc, index) {
     const taskList = document.getElementById("task-list");
     const taskItem = document.createElement("li");
-    taskItem.className = "task-item"
+    taskItem.className = "task-item";
+    taskItem.id = doc.id; // Set the task id as element id for easy deletion
     taskItem.innerHTML = `
-    <span>${doc.data().task}</span>
-    <button onclick="deleteTask('${doc.id}')">Delete</button>
+        <span>${index + 1}. ${doc.data().task}</span>
+        <button onclick="deleteTask('${doc.id}')"></button>
     `;
     taskList.appendChild(taskItem);
-
 }
 
 // Real-time listener for tasks
 db.collection("tasks")
-.orderBy("timestamp", "desc")
-.onSnapshot(snapshot => {
-    const changes = snapshot.docChanges();
-    changes.forEach(change => {
-        if (change.type === "added") {
-            renderTasks(change.doc);
-        }
+    .orderBy("timestamp", "desc")
+    .onSnapshot(snapshot => {
+        const taskList = document.getElementById("task-list");
+        taskList.innerHTML = ""; // Clear the list before rendering new snapshot
+        let index = 0;
+        snapshot.forEach(doc => {
+            renderTasks(doc, index);
+            index++;
+        });
     });
-});
 
 // Function to delete a task
-
 function deleteTask(id) {
-    db.collection("tasks").doc(id).delete();
+    db.collection("tasks").doc(id).delete().then(() => {
+        document.getElementById(id).remove(); // Remove the task from the DOM
+    });
 }
