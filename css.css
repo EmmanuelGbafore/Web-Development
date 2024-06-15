@@ -1,0 +1,129 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.introduction-section {
+    background: lightcyan;
+    line-height: 25px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    color: #722424;
+    text-align: center;
+    padding: 0 0 10px 0;
+    margin: 0;
+}
+
+.container {
+    width: auto;
+    padding: 20px;
+    margin: 20px;
+    border: solid 1px black;
+    position: relative;
+}
+
+.container p {
+    text-align: center;
+    line-height: 25px;
+}
+
+.skills-section {
+    background: lightgray;
+    line-height: 25px;
+    padding: 10px;
+    margin: 0;
+}
+
+.skills-section ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills-section li {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    font-size: 20px;
+    background: blue;
+    margin: 20px;
+    border: solid 1px black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.skills-section li:hover {
+    color: #fff;
+    background: #230996;
+    transition: 0.5s;
+}
+
+footer {
+    padding: 10px;
+    background: black;
+    line-height: 25px;
+    color: white;
+}
+
+.contact-info p {
+    margin-top: 20px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #814040;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #fe004a;
+}
+
+.contact-info p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons ul {
+    list-style-type: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: #ff004f;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}

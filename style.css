@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh; /* Ensure full viewport height */
+    background-color: #f4f4f4;
+}
+
+
+.container {
+    text-align: center;
+    width: 300px;
+}
+
+.task-form {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex: 1;
+    height: 40px; /* Fixed height */
+    box-sizing: border-box;
+}
+
+.task-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px; /* Same height as input */
+    box-sizing: border-box;
+    white-space: nowrap; /* Ensure text stays on one line */
+}
+
+.task-form button:hover {
+    background-color: darkviolet;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.task-item {
+    list-style-type: none;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item span {
+    flex: 1;
+    text-align: left;
+}
+
+.task-item button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-item button:hover {
+    background-color: #cc0000;
+}
+
+.task-item button::before {
+    content: '\1F5D1'; /* Unicode for trash bin icon */
+    font-size: 16px;
+}

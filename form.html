@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's Form</title>
+</head>
+<body>
+    <!--Form Body-->
+    <!--Student's Bio-Data Information-->
+    <form>
+        <fieldset>
+            <legend>Bio-Data Information</legend>
+
+            <label for ="name">Name</label>
+            <input type = "text" name="name" id="name" placeholder="Enter your Name" required><br>
+
+            <label for ="DOB">Date of Birth</label>
+            <input type="date" name="DOB" id="DOB" placeholder="Enter your Date of Birth" required><br>
+
+            <label for ="gender">Male</label>
+            <input type="radio" name="name" id="male" placeholder="male">
+
+            <label for ="gender">Female</label>
+            <input type="radio" name="name" id="female" placeholder="female">
+
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" placeholder="Enter your Address" required><br>
+
+            <label for="tel">Telephone</label>
+            <input type="tel" name="telephone" id="telephone" placeholder="Enter your Telephone Number" required><br>
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Enter your Email" required><br>
+
+            <select name="course" required>
+                <option value="dart">Dart with Flutter</option>
+                <option value="web tech">Web Technologies</option>
+                <option value="python">Python</option>
+                <option value="database">Database</option>
+            </select><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Confirm Registration</legend>
+            <button type="radio">Register</button>
+            <button type="radio">Cancel</button>
+        </fieldset>
+
+
+
+
+
+    </form>
+</body>
+</html>
